@@ -39,6 +39,13 @@ Page {
         return s.join(", ")
     }
 
+    // E-Control sends 00:00–00:00 for closed days and 00:00–24:00 for open all day.
+    function hoursText(from, to) {
+        if (!from || !to || (from === "00:00" && to === "00:00")) return qsTr("closed")
+        if (from === "00:00" && to === "24:00") return qsTr("24 hours")
+        return from + " – " + to
+    }
+
     function websiteUrl() {
         var w = String(contact.website || "")
         if (w === "") return ""
@@ -114,8 +121,7 @@ Page {
                 model: page.hours
                 DetailItem {
                     label: modelData.label || modelData.day || ""
-                    value: (modelData.from && modelData.to)
-                           ? modelData.from + " – " + modelData.to : qsTr("closed")
+                    value: page.hoursText(modelData.from, modelData.to)
                 }
             }
 

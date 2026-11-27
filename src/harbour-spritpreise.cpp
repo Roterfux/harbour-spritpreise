@@ -20,7 +20,7 @@ protected:
                                  QIODevice *outgoingData) override
     {
         QNetworkRequest req(request);
-        req.setRawHeader("User-Agent", "harbour-spritpreise/0.1 (SailfishOS)");
+        req.setRawHeader("User-Agent", "harbour-spritpreise/0.1.1 (SailfishOS)");
         return QNetworkAccessManager::createRequest(op, req, outgoingData);
     }
 };

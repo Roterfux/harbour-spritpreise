@@ -5,11 +5,6 @@ QT += network
 
 SOURCES += src/harbour-spritpreise.cpp
 
-# .desktop must be installed explicitly
-desktop.files = harbour-spritpreise.desktop
-desktop.path = /usr/share/applications
-INSTALLS += desktop
-
 DISTFILES += \
     harbour-spritpreise.desktop \
     rpm/harbour-spritpreise.spec \
