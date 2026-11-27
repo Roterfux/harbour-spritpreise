@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Name=Spritpreise
+Comment=Cheapest fuel prices in Austria
+Icon=harbour-spritpreise
+Exec=harbour-spritpreise
+X-Nemo-Application-Type=silica-qt5
+X-Nemo-Single-Instance=yes
+
+[X-Sailjail]
+Permissions=Internet
+OrganizationName=org.spritpreise
+ApplicationName=harbour-spritpreise
